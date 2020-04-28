@@ -43,7 +43,7 @@ header {
 
 .menu__item {
   width: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .layer {
@@ -131,16 +131,42 @@ header {
   transition-property: background, transform, -webkit-transform;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-backdrop-filter: brightness(150%);
-          backdrop-filter: brightness(150%);
 }
 
 .link-grow {
   -webkit-transform: scale(2);
           transform: scale(2);
-  background: red;
-  -webkit-box-shadow: 0 0 20px white;
-          box-shadow: 0 0 20px white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8a25b1), to(#16c0f0));
+  background: linear-gradient(#8a25b1, #16c0f0);
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
   opacity: 0.5;
+}
+
+.hovered--social-link {
+  -webkit-animation: rotateIt 1s 1 forwards;
+          animation: rotateIt 1s 1 forwards;
+}
+
+@-webkit-keyframes rotateIt {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: scale(1.2) rotate(-360deg);
+            transform: scale(1.2) rotate(-360deg);
+  }
+}
+
+@keyframes rotateIt {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: scale(1.2) rotate(-360deg);
+            transform: scale(1.2) rotate(-360deg);
+  }
 }
 /*# sourceMappingURL=main.css.map */

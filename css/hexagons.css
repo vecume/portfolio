@@ -160,4 +160,14 @@
     #hexGrid {
         font-size: 13px;
     }
+    .hex h1 {
+      font-size: 14px;
+      bottom: 15%;
+    }
+    .hexLink:hover img, .hexLink:focus img {
+      top: 22%;
+    }
+    .hexLink:hover h1, .hexLink:focus h1 {
+      bottom: 20%;
+    }
 }

@@ -41,7 +41,7 @@ header {
 
 .menu__item {
   width: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .layer {
@@ -110,12 +110,25 @@ header {
   transition: all 0.3s ease;
   transition-property: background, transform;
   transform: translate(-50%,-50%);
-  backdrop-filter: brightness(150%);
 }
 
 .link-grow {
   transform: scale(2);
-  background: red;
-  box-shadow: 0 0 20px white;
+  background:linear-gradient(#8a25b1,#16c0f0);
+  box-shadow: 0 0 10px white;
   opacity: 0.5;
 }
+
+.hovered--social-link {
+  animation: rotateIt 1s 1 forwards;
+}
+
+@keyframes rotateIt {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: scale(1.2) rotate(-360deg);
+  }
+}
+

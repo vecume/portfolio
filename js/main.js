@@ -10,14 +10,14 @@ const elLayer = document.querySelector('.layer');
 const elCursor = document.querySelector('.cursor');
 
 const elsLink = document.querySelectorAll('a');
-
+const elsNavItem = document.querySelectorAll('.menu__item')
 window.addEventListener('mousemove', (e) => {
   elCursor.style.top = e.pageY + 'px';
   elCursor.style.left = e.pageX + 'px';
 });
 
 elsLink.forEach(link => {
-  link.addEventListener('mouseover', () => {
+  link.addEventListener('mouseover', (evt) => {
     elCursor.classList.add('link-grow');
   });
   link.addEventListener('mouseleave', () => {
