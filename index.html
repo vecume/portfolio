@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="css/hexagons.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  
+
+<body id="body">
+  <main>
+    <div class="cursor"></div>
+    <div class="layer"></div>
+    <header>
+      <a href="#home" class="logo"><img src="img/logo.png" alt="vecume"></a>
+      <nav class="social-nav">
+        <ul class="social__menu">
+          <li class="menu__item"><a target="_blank" href="https://t.me/humosoft"><img src="img/tg.png" alt="telegram"></a></li>
+          <li class="menu__item"><a target="_blank" href="#"><img src="img/fb.png" alt="facebook"></a></li>
+          <li class="menu__item"><a target="_blank" href="#"><img src="img/insta.png" alt="instagramm"></a></li>
+          <li class="menu__item"><a target="_blank" href="#"><img src="img/git.png" alt="github"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home">
+      <ul id="hexGrid">
+        <li class="hex" data-img-id="1" >
+          <div class="hexIn" data-img-id="1">
+            <a class="hexLink" href="#" data-img-id="1">
+              <img src="img/aboutme.png" alt="" data-img-id="1">
+              <h1 data-img-id="1">About</h1>
+            </a>
+          </div>
+        </li>
+        <li class="hex" data-img-id="2" >
+          <div class="hexIn" data-img-id="2">
+            <a class="hexLink" href="#" data-img-id="2">
+              <img src="img/resume.png" alt="" data-img-id="2">
+              <h1 data-img-id="2">Resume</h1>
+            </a>
+          </div>
+        </li>
+        <li class="hex" data-img-id="3">
+          <div class="hexIn" data-img-id="3">
+            <a class="hexLink" href="#" data-img-id="3">
+              <img src="img/services.png" alt="" data-img-id="3">
+              <h1 data-img-id="3">Services</h1>
+            </a>
+          </div>
+        </li>
+        <li class="hex" data-img-id="4">
+          <div class="hexIn" data-img-id="4">
+            <a class="hexLink" href="#" data-img-id="4">
+              <img src="img/blog.png" alt="" data-img-id="4">
+              <h1 data-img-id="4">Blog</h1>
+            </a>
+          </div>
+        </li>
+        <li class="hex" data-img-id="5">
+          <div class="hexIn" data-img-id="5">
+            <a class="hexLink" href="#" data-img-id="5">
+              <img src="img/contact.png" alt="" data-img-id="5"> 
+              <h1 data-img-id="5">Contact</h1>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
