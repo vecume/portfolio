@@ -30,6 +30,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .social-nav {
@@ -54,12 +55,21 @@ header {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.2)
-  ), url('../img/1.jpg');
+  ), url('../img/4.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  animation: bgImage 30s forwards infinite ease-in-out;
 }
 
+@keyframes bgImage {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(3);
+  }
+} 
 
 #hexGrid {
   padding-left: 0;
@@ -100,6 +110,7 @@ header {
   transition: all 0.3s ease;
   transition-property: background, transform;
   transform: translate(-50%,-50%);
+  backdrop-filter: brightness(150%);
 }
 
 .link-grow {

@@ -30,6 +30,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .social-nav {
@@ -51,11 +54,35 @@ header {
   right: 0;
   -webkit-transition: background 0.8s ease;
   transition: background 0.8s ease;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../img/1.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/1.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../img/4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-animation: bgImage 30s forwards infinite ease-in-out;
+          animation: bgImage 30s forwards infinite ease-in-out;
+}
+
+@-webkit-keyframes bgImage {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+
+@keyframes bgImage {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
 }
 
 #hexGrid {
@@ -104,6 +131,8 @@ header {
   transition-property: background, transform, -webkit-transform;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: brightness(150%);
+          backdrop-filter: brightness(150%);
 }
 
 .link-grow {
