@@ -1,3 +1,15 @@
+import Highway from '@dogstudio/highway';
+import Fade from './transitions';
+
+
+const H = new Highway.Core({
+  transitions: {
+    default: Fade
+  }
+});
+
+
+
 const elsHexagons = document.querySelectorAll('.hex');
 var loc = window.location.pathname;
 var dir = loc.substring(0, loc.lastIndexOf('/'));

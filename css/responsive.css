@@ -1,0 +1,72 @@
+@media (max-width: 1370px) {
+  .hex h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hex h1 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hex h1 {
+    font-size: 15px;
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 750px) {
+  .hex img {
+    width: 30%;
+  }
+  .hex h1 {
+    font-size: 14px;
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* <- 2-1  hexagons per row */
+  #hexGrid {
+    padding-bottom: 11.2%;
+  }
+  .hex {
+    width: 50%;
+    /* = 100 / 3 */
+  }
+  .hex img {
+    width: 40%;
+  }
+  .hex h1 {
+    font-size: 15px;
+  }
+  .hex:nth-child(3n+3) {
+    /* first hexagon of even rows */
+    margin-left: 25%;
+    /* = width of .hex / 2  to indent even rows */
+  }
+  .hex:nth-child(5n+4) {
+    /* first hexagon of even rows */
+    margin-left: 0;
+    /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 400px) {
+  #hexGrid {
+    font-size: 13px;
+  }
+  .hex h1 {
+    font-size: 14px;
+    bottom: 15%;
+  }
+  .hexLink:hover img, .hexLink:focus img {
+    top: 22%;
+  }
+  .hexLink:hover h1, .hexLink:focus h1 {
+    bottom: 20%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -1,4 +1,4 @@
-
+@import './responsive.scss';
 
 
 * {
@@ -10,8 +10,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  
+  height: 100vh;
 }
 
 img {
@@ -42,24 +41,53 @@ header {
 .menu__item {
   width: 40px;
   margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+    filter: brightness(200%);
+  }
+}
+
+#home,#about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#home {
+  
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: background 0.8s ease;
+  
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.2)
+    ), url('../img/4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: bgImage 30s forwards infinite ease-in-out;
+  }
 }
 
 .layer {
-  position: absolute;
+  overflow: hidden;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: background 0.8s ease;
   
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0.2), 
-    rgba(0, 0, 0, 0.2)
-  ), url('../img/4.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  animation: bgImage 30s forwards infinite ease-in-out;
 }
 
 @keyframes bgImage {
@@ -94,9 +122,6 @@ header {
   filter: brightness(150%);
 }
 
-.logo:hover #body, .logo:focus #body {
-  background: #fff;
-}
 
 .cursor {
   position: absolute;
@@ -119,16 +144,33 @@ header {
   opacity: 0.5;
 }
 
-.hovered--social-link {
-  animation: rotateIt 1s 1 forwards;
+
+
+
+
+
+#about {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.2)
+  ), url('../img/about.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-@keyframes rotateIt {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: scale(1.2) rotate(-360deg);
-  }
+.home-content {
+  width: 100%;
 }
 
+.about-body {
+  background: #222;
+  z-index: 100;
+}
+
+.about-content {
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  background: red;
+}
