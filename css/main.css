@@ -77,10 +77,13 @@
 }
 
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.about-body {
+  overflow: scroll;
 }
 
 img {
@@ -127,7 +130,7 @@ header {
           filter: brightness(200%);
 }
 
-#home, #about {
+#home {
   position: fixed;
   top: 0;
   left: 0;
@@ -137,7 +140,7 @@ header {
 
 #home::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -151,15 +154,6 @@ header {
   background-position: center center;
   -webkit-animation: bgImage 30s forwards infinite ease-in-out;
           animation: bgImage 30s forwards infinite ease-in-out;
-}
-
-.layer {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 @-webkit-keyframes bgImage {
@@ -239,15 +233,16 @@ header {
 }
 
 #about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../img/about.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/about.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.home-content {
-  width: 100%;
 }
 
 .about-body {

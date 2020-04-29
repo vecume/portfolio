@@ -5,12 +5,14 @@
   cursor: none;
   box-sizing: border-box;
 }
-
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.about-body {
+  overflow: scroll;
 }
 
 img {
@@ -49,20 +51,18 @@ header {
   }
 }
 
-#home,#about {
+#home {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
+  right: 0; 
 }
 
 #home {
-  
-
   &::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -80,15 +80,7 @@ header {
   }
 }
 
-.layer {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  
-}
+
 
 @keyframes bgImage {
   from {
@@ -105,8 +97,6 @@ header {
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
-  
- 
 }
 
 .logo {
@@ -150,6 +140,11 @@ header {
 
 
 #about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.2)
@@ -159,9 +154,6 @@ header {
   background-position: center center;
 }
 
-.home-content {
-  width: 100%;
-}
 
 .about-body {
   background: #222;
@@ -174,3 +166,4 @@ header {
   margin: 100px auto;
   background: red;
 }
+

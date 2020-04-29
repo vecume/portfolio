@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 60%;
+  height: auto;
   margin: 0 auto;
   overflow: hidden;
   font-family: 'Raleway', sans-serif;
