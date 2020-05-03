@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vecume/portfolio#readme",
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@dogstudio/highway": "^2.2.1",
     "gsap": "^3.2.6"
   },
