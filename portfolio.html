@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="portfolio-body" data-barba="wrapper">
+  <main class="portfolio-main" data-barba="container" data-barba-namespace="portfolio">
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="main__title">
+          <p>Showcasing some of my best work</p>
+          <h2>Portfolio</h2>
+          <span class="animated-line"></span>
+        </div>
+
+        <ul class="controllers">
+          <li><button type="button" class="sort-btn" data-sort="*">All</button></li>
+          <li><button type="button" class="sort-btn" data-sort="landing">Landing Pages</button></li>
+          <li><button type="button" class="sort-btn" data-sort="api">API</button></li>
+          <li><button type="button" class="sort-btn" data-sort="channel">Channels</button></li>
+          <li><button type="button" class="sort-btn" data-sort="bots">Bots</button></li>
+        </ul>
+
+
+        <ul class="sort-results">
+
+        </ul>
+
+      </div>
+      
+  
+      <template id="sortedPostTemplate">
+        <li>
+          <a class="project-link" href="">
+            <img class="project-img" src="" alt="">
+            <h3 class="project-title"></h3>
+            <p class="project-type">More Info</p>
+          </a>
+        </li>
+      </template>
+
+      <script src="js/portfolioData.js"></script>
+      <script src="js/portfolio.js"></script>
+    </section>
+  </main>
+</body>
+
+</html>

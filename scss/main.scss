@@ -686,3 +686,124 @@ p {
     background: linear-gradient(to right, $mp,$mb);
   }
 }
+
+
+
+/////PORTFOLIO//////
+
+
+.portfolio-body {
+  overflow-y: scroll;
+}
+
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background:#111;
+  padding-bottom: 100px;
+}
+
+.controllers {
+  margin: 0 auto;
+  width: 350px;
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #cecece;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    padding-bottom: 5px;
+
+    &:hover, &:focus {
+      color: $mp;
+      border-bottom: 1px solid $mp;
+    }
+  }
+  .btn--active {
+    color: $mp;
+    border-bottom: 1px solid $mp;
+  }
+}
+
+.sort-results {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  li {
+    width: 350px;
+    margin-bottom: 25px;
+    transform: scale(0);
+  }
+}
+
+.project-link {
+  display: block;
+  position: relative;
+
+  img {
+    height: 260px;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+
+  &:hover img, &:focus img {
+    filter: brightness(25%);
+  }
+
+  &:hover .project-type,&:focus .project-type {
+    opacity: 1;
+  }
+  &:hover .project-title,&:focus .project-title {
+    opacity: 1;
+  }
+}
+
+.project-title,.project-type  {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.project-title {
+  color: $mb  ;
+}
+
+.project-type {
+  top: calc(90% - 15px);
+  opacity: 0;
+} 
+
+.animateProject {
+  animation: animateProject 0.5s 1 ease forwards;
+}
+
+@keyframes animateProject {
+  0%{
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
