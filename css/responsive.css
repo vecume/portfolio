@@ -25,10 +25,37 @@
     font-size: 14px;
     bottom: 20%;
   }
+  @-webkit-keyframes cube {
+    from {
+      -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+              transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      -webkit-transform: scale(10) rotate(960deg) translate(-50%, -50%);
+              transform: scale(10) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+  @keyframes cube {
+    from {
+      -webkit-transform: scale(0) rotate(0deg) translate(-50%, -50%);
+              transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      -webkit-transform: scale(10) rotate(960deg) translate(-50%, -50%);
+              transform: scale(10) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
 }
 
 @media (max-width: 600px) {
   /* <- 2-1  hexagons per row */
+  .cursor {
+    display: none;
+  }
   #hexGrid {
     padding-bottom: 11.2%;
   }

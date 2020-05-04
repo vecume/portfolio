@@ -24,9 +24,22 @@
     font-size: 14px;
     bottom: 20%;
   }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);   
+      opacity: 1;
+    }
+    to {
+      transform: scale(10) rotate(960deg) translate(-50%, -50%); 
+      opacity: 0;
+    }
+  }
 }
 
 @media (max-width: 600px) { /* <- 2-1  hexagons per row */
+  .cursor {
+    display: none;
+  }
   #hexGrid{
     padding-bottom: 11.2%
   }

@@ -5,14 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/hexagons.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body id="body" data-barba="wrapper">
-
+  <div class="loading-container">
+    <div class="loading-screen">
+    </div>
+  </div>
   <div class="cursor"></div>
-  <header>
+  <header class="main-header">
     <a href="./" class="logo"><img src="img/logo.png" alt="vecume"></a>
     <nav class="social-nav">
       <ul id="social-menu" class="social__menu">
@@ -26,6 +30,14 @@
   </header>
   <main data-barba="container" data-barba-namespace="home">
     <section id="home">
+      <div class="hero"> 
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
       <div class="home-content">
         <ul id="hexGrid">
           <li class="hex" data-img-id="1">
@@ -47,8 +59,8 @@
           <li class="hex" data-img-id="3">
             <div class="hexIn" data-img-id="3">
               <a class="hexLink" href="#" data-img-id="3">
-                <img src="img/services.png" alt="" data-img-id="3">
-                <h1 data-img-id="3">Services</h1>
+                <img src="img/portfolio.png" alt="" data-img-id="3">
+                <h1 data-img-id="3">Portfolio</h1>
               </a>
             </div>
           </li>
@@ -72,6 +84,7 @@
       </div>
     </section>
   </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="js/main.js"></script>
