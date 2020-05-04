@@ -139,6 +139,17 @@ ul {
   list-style-type: none;
 }
 
+mark {
+  padding: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#8a25b1), to(#16c0f0));
+  background: linear-gradient(to right, #8a25b1, #16c0f0);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   width: 100%;
   display: -webkit-box;
@@ -552,13 +563,6 @@ p {
   line-height: 1.95;
 }
 
-.about__content .about-me__description mark {
-  padding: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(#8a25b1), to(#16c0f0));
-  background: linear-gradient(to right, #8a25b1, #16c0f0);
-  color: white;
-}
-
 .about__content .line {
   display: block;
   width: 100%;
@@ -686,5 +690,202 @@ p {
 .services__list li:hover img, .services__list li:focus img {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+
+.resume-body {
+  overflow-y: scroll;
+}
+
+.resume {
+  width: 100%;
+  min-height: 100vh;
+  background: #111;
+  padding-bottom: 100px;
+}
+
+.channels__list {
+  display: none;
+}
+
+.timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.timeline__box {
+  width: 45%;
+}
+
+.timeline__box h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.timeline__item {
+  position: relative;
+  padding: 30px;
+  background: #222;
+  border-left: 2px solid #16c0f0;
+}
+
+.timeline__item h3, .timeline__item p {
+  margin-bottom: 15px;
+}
+
+.timeline__item p {
+  line-height: 2;
+}
+
+.timeline__item a {
+  color: #8a25b1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.timeline__item a:hover, .timeline__item a:focus {
+  color: #bc11ff;
+}
+
+.timeline__item span:not(.channel-info) {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #8a25b1;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.timeline__item span:not(.channel-info)::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #16c0f0;
+}
+
+.timeline__item:not(:last-child) {
+  border-bottom: 1px solid #313131;
+}
+
+.linking-title {
+  margin: 75px 0;
+}
+
+.linking-title h2 {
+  margin: 15px 0;
+  font-size: 36px;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill__item {
+  width: 48%;
+  margin-bottom: 25px;
+}
+
+.skill__item:nth-child(1) .progress-title p:last-child {
+  left: 90%;
+}
+
+.skill__item:nth-child(1) .progress-bar span {
+  width: 90%;
+}
+
+.skill__item:nth-child(2) .progress-title p:last-child {
+  left: 80%;
+}
+
+.skill__item:nth-child(2) .progress-bar span {
+  width: 80%;
+}
+
+.skill__item:nth-child(3) .progress-title p:last-child {
+  left: 70%;
+}
+
+.skill__item:nth-child(3) .progress-bar span {
+  width: 70%;
+}
+
+.skill__item:nth-child(5) .progress-title p:last-child {
+  left: 55%;
+}
+
+.skill__item:nth-child(5) .progress-bar span {
+  width: 55%;
+}
+
+.skill__item:nth-child(6) .progress-title p:last-child {
+  left: 45%;
+}
+
+.skill__item:nth-child(6) .progress-bar span {
+  width: 45%;
+}
+
+.progress-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.progress-title p {
+  font-size: 16px;
+  color: #cecece;
+}
+
+.progress-title p:last-child {
+  position: absolute;
+  left: 95%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 9px;
+  background: #2f2f2f;
+}
+
+.progress-bar span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, right top, from(#8a25b1), to(#16c0f0));
+  background: linear-gradient(to right, #8a25b1, #16c0f0);
 }
 /*# sourceMappingURL=main.css.map */
