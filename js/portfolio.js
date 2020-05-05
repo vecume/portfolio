@@ -28,6 +28,7 @@ function portfolio() {
     results.forEach(r => {
       const projectsClone = document.importNode(elResultTemplate, true);
       projectsClone.querySelector('.project-link').href = r.link;
+      projectsClone.querySelector('.project-link').target = '_blank';
       projectsClone.querySelector('.project-img').src = `img/${r.img}`;
       projectsClone.querySelector('.project-img').alt = r.name;
       projectsClone.querySelector('.project-title').textContent = r.name;
