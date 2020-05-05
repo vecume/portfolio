@@ -32,16 +32,16 @@ function pageTransition() {
     transformOrigin: "bottom left"
   });
   tl.to('.loading-screen', {
-    duration: .5,
+    duration: 0.4,
     scaleY: 1
   });
   tl.to('.loading-screen', {
-    duration: .5,
+    duration: 0.4,
     scaleY: 0,
     skewX: 0,
     transformOrigin: "top left",
     ease: "power1.out",
-    delay: 0.5
+    delay: 0.4
   });
 }
 
@@ -49,10 +49,10 @@ function pageTransition() {
 function contentAnimation() {
   var tl = gsap.timeline();
   tl.from('ul.social__menu li', {
-    duration: 0.4,
+    duration: 0.3,
     opacity: 0,
     translateX: 10,
-    delay: 0.7,
+    delay: 0.3,
     stagger: 0.1
   });
   tl.from('.logo', {
@@ -61,7 +61,7 @@ function contentAnimation() {
     translateY: -10
   });
   tl.from('ul#hexGrid li', {
-    duration: 0.5,
+    duration: 0.3,
     opacity: 0,
     scale: 0,
     stagger: 0.1
