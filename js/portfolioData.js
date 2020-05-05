@@ -1,43 +1,43 @@
 const projects = [
   {
     type: "landing",
-    link: "./fylo",
+    link: "./../fylo",
     name: "Fylo",
     img: "fylo.png"
   },
   {
     type: "landing",
-    link: "./digital-agency",
+    link: "./../digital-agency",
     name: "Digital Agency",
     img: "digitalagency.png"
   },
   {
     type: "landing",
-    link: "./minimal-yelessandri",
+    link: "./../minimal-yelessandri",
     name: "Minimal Yelessandri",
     img: "minimal.png"
   },
   {
     type: "landing",
-    link: "./applab",
+    link: "./../applab",
     name: "AppLab",
     img: "applab.jpg"
   },
   {
     type: "api",
-    link: "./pokedex",
+    link: "./../pokedex",
     name: "PokeDex",
     img: "pokedex.png"
   },
   {
     type: "api",
-    link: "./music-app",
+    link: "./../music-app",
     name: "Music App",
     img: "musicapp.jpg"
   },
   {
     type: "api",
-    link: "./movie-app",
+    link: "./../movie-app",
     name: "Movie App",
     img: "movieapp.png"
   },
