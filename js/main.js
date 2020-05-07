@@ -81,6 +81,7 @@ barba.init({
       done();
       try {
         document.body.style.overflowY = 'scroll';
+        document.body.style.overflowX = 'hidden';
       } catch (error) {
         console.log(error);
       }

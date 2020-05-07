@@ -12,8 +12,7 @@
   <main class="portfolio-main" data-barba="container" data-barba-namespace="portfolio">
 
     <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="main__title">
+        <div class="main__title container">
           <p>Showcasing some of my best work</p>
           <h2>Portfolio</h2>
           <span class="animated-line"></span>
@@ -28,11 +27,11 @@
         </ul>
 
 
-        <ul class="sort-results">
+        <ul class="sort-results container">
 
         </ul>
 
-      </div>
+      
 
 
       <template id="sortedPostTemplate">
@@ -46,6 +45,11 @@
       </template>
     </section>
   </main>
+  <script src="js/portfolioData.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script>
+    portfolio();
+  </script>
 </body>
 
 </html>

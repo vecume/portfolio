@@ -4,9 +4,21 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .hex h1 {
     font-size: 17px;
+  }
+  .info__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .small-opening {
+    display: none;
   }
 }
 
