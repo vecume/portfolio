@@ -7,6 +7,12 @@ const projects = [
   },
   {
     type: "landing",
+    link: "./../miushi",
+    name: "Miushi",
+    img: "miushi.jpg"
+  },
+  {
+    type: "landing",
     link: "./../digital-agency",
     name: "Digital Agency",
     img: "digitalagency.png"
