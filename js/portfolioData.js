@@ -24,12 +24,6 @@ const projects = [
     img: "minimal.png"
   },
   {
-    type: "landing",
-    link: "./../applab",
-    name: "AppLab",
-    img: "applab.jpg"
-  },
-  {
     type: "api",
     link: "./../pokedex",
     name: "PokeDex",
