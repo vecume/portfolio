@@ -1,4 +1,4 @@
-function portfolio() {
+function showProjects() {
   const elsSortButton = document.querySelectorAll('.sort-btn');
   const elResultsBox = document.querySelector('.sort-results');
   const elResultTemplate = document.querySelector('#sortedPostTemplate').content;

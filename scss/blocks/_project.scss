@@ -1,0 +1,144 @@
+.projects {
+  margin-bottom: 50px;
+}
+
+
+.controllers {
+  margin: 0 auto;
+  width: 350px;
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    padding-bottom: 5px;
+    opacity: 0.8;
+    color: var(--text-color);
+    cursor: pointer;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+  .btn--active {
+    transform: translateY(-5px);
+    opacity: 1;
+    border-bottom: 1px solid var(--text-color);
+  }
+}
+
+.sort-results {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+
+  li {
+    width: 350px;
+    margin-bottom: 25px;
+    transform: scale(0);
+  }
+}
+
+.project-link {
+  display: block;
+  position: relative;
+
+  img {
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+
+  &:hover img, &:focus img {
+    filter: brightness(25%);
+  }
+
+  &:hover .project-type,&:focus .project-type {
+    opacity: 0.4;
+  }
+  &:hover .project-title,&:focus .project-title {
+    opacity: 1;
+  }
+}
+
+.project-title,.project-type  {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.project-title {
+  color: #fff;
+}
+
+.project-type {
+  top: calc(90% - 15px);
+  color: #fff;
+  opacity: 0;
+} 
+
+.animateProject {
+  animation: animateProject 0.5s 1 ease forwards;
+}
+
+@keyframes animateProject {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 450px) {
+  .controllers {
+    width: 100% !important  ;
+    li {
+      button {
+        white-space: nowrap;
+        font-size: 15px;
+        padding-bottom: 0;
+
+        &.btn--active {
+          transform: none;
+        }
+       }
+    }
+  }
+  .sort-results {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  .controllers {
+    width: 100% !important  ;
+    li {
+      button {
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.contact {
+  margin-bottom: 50px;
+}
+
+.content__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact__form {
+  width: 650px;
+  margin: 0 auto;
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background:var(--bg);
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    outline: none;
+    color: var(--text-color);
+    font-size: 15px;
+    transition: 0.3s ease;
+    &:focus {
+      box-shadow: 0 0 10px rgb(184, 178, 178);
+    }
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 10px 15px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 15px;
+
+    &:focus {
+      box-shadow: 0 0 10px rgb(184, 178, 178);
+    }
+  }
+}
+
+.form__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  input {
+    width: 310px;
+  }
+} 
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+
+
+
+.contact-opening-title {
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.contact-opening-title + p {
+  margin-bottom: 25px;
+}
+
+.contact__info {
+  width: 400px;
+}
+
+.contact__info__bottom {
+  display: flex;
+}
+
+.contact__info__left {
+  padding-right: 15px;
+  width: 65px;
+  img:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}
+
+.contact__info__right {
+  padding-left: 15px;
+  border-left: 2px solid var(--text-color);
+
+  a {
+    font-size: 14px;
+  }
+}
+
+.info__text:not(:last-child) {
+  margin-bottom: 25px;
+
+  h4 {
+    font-size: 15px;
+  }
+}
+
+.contact__info__right {
+  .social__menu {
+    position: initial;
+    display: flex !important;
+
+    .menu__item {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 1310px) {
+  .form__wrapper {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .contact__form {
+    width: 100%;
+  }
+  .form__top {
+    .input-wrapper {
+      width: 48%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .contact__info {
+    width: 100%;
+  }
+}
+
+

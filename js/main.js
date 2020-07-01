@@ -1,137 +1,38 @@
-const elCursor = document.querySelector('.cursor');
-const elAbout = document.querySelector('.about-main');
-const elVideo = document.querySelector('#myVideo')
+showProjects();
 
-function delay(n) {
-  n = n || 2000;
-  return new Promise(done => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
+const elDarkModeToggler = document.querySelector('.light-toggler');
+
+const root = document.documentElement;
+
+elDarkModeToggler.addEventListener('click', function() {
+	elDarkModeToggler.classList.toggle('light-toggler--dark');
+	root.classList.toggle('dark-mode');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//SVG GENERATORS/////
+
+
+function getTelegramSvg(start,stop) {
+  return `
+  <svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+	<linearGradient spreadMethod="pad" id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+		<stop offset="0%" style="stop-color:${start};stop-opacity:1;" />
+		<stop offset="100" style="stop-color:${stop};stop-opacity:1;" />
+	</linearGradient>
+</defs><circle cx="12" cy="12" fill="url(#gradient)" r="12"/><path d="m5.491 11.74 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z" fill="#fff" fill-opacity="1"/></svg>
+  `
 }
-
-function hoverEffect() {
-  elCursor.classList.remove('link-grow');
-  var elsLink = document.querySelectorAll('a');
-  elsLink.forEach(link => {
-    if (window.innerWidth > 600) {
-      link.addEventListener('mouseover', () => {
-        elCursor.classList.add('link-grow');
-      });
-      link.addEventListener('mouseleave', () => {
-        elCursor.classList.remove('link-grow');
-      });
-    }
-  });
-}
-
-function pageTransition() {
-  var tl = gsap.timeline();
-  tl.set('.loading-screen', {
-    transformOrigin: "bottom left"
-  });
-  tl.to('.loading-screen', {
-    duration: 0.4,
-    scaleY: 1
-  });
-  tl.to('.loading-screen', {
-    duration: 0.4,
-    scaleY: 0,
-    skewX: 0,
-    transformOrigin: "top left",
-    ease: "power1.out",
-    delay: 0.4
-  });
-}
-
-// Function to animate the content of each page
-function contentAnimation() {
-  var tl = gsap.timeline();
-  tl.from('ul.social__menu li', {
-    duration: 0.3,
-    opacity: 0,
-    translateX: 10,
-    delay: 0.3,
-    stagger: 0.1
-  });
-  tl.from('.logo', {
-    duration: 0.3,
-    opacity: 0,
-    translateY: -10
-  });
-  tl.from('ul#hexGrid li', {
-    duration: 0.3,
-    opacity: 0,
-    scale: 0,
-    stagger: 0.1
-  });
-
-}
-
-barba.init({
-  sync: true,
-
-  transitions: [{
-
-    async leave(data) {
-      const done = this.async();
-      pageTransition();
-      await delay(500);
-      done();
-      try {
-        document.body.style.overflowY = 'scroll';
-        document.body.style.overflowX = 'hidden';
-      } catch (error) {
-        console.log(error);
-      }
-    },
-
-    async enter(data) {
-      contentAnimation();
-    },
-
-    async once(data) {
-      contentAnimation();
-
-    }
-
-  }]
-});
-
-
-
-const observer = new MutationObserver(mutation => {
-  if (document.body.children[3].classList.value === "portfolio-main") {
-    portfolio();
-  }
-  hoverEffect();
-});
-
-//LISTEN BODY CAHNGES
-
-observer.observe(document.body, {
-  childList: true,
-  attributes: false,
-  subtree: false,
-  characterData: false
-});
-
-
-
-window.addEventListener('mousemove', (e) => {
-  if (window.innerWidth > 600) {
-    elCursor.style.top = e.pageY + 'px';
-    elCursor.style.left = e.pageX + 'px';
-  }
-
-
-});
-
-
-
-const elPortfolio = document.querySelector('.portfolio-link');
-
-document.body.addEventListener('change', () => {
-  console.log('ok');
-});
